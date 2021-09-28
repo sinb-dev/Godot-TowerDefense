@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="TowerDefence"
+run/main_scene="res://TowerDefense.tscn"
 config/icon="res://icon.png"
 
 [physics]
