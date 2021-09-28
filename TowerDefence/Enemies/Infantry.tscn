@@ -4,21 +4,23 @@
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://Assets/healthbar.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 11.5914, 14.0861 )
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 979.823, 656.669, 24.9631, 30.7254 )
 
-[node name="Infantry" type="Area2D"]
+[node name="Infantry" type="Area2D" groups=[
+"enemy",
+]]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = SubResource( 1 )
+texture = SubResource( 2 )
 
 [node name="Healthbar" type="TextureProgress" parent="."]
 margin_left = -8.0
