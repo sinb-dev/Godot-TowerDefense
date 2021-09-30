@@ -6,6 +6,7 @@ func _ready():
 	pass
 
 func _on_Slot_input_event(viewport, event, shape_idx):
+
 	if event.button_mask == 1 && event.pressed:
 		on_clicked()
 	pass

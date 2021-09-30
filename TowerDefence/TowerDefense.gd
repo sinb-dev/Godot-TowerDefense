@@ -16,9 +16,9 @@ func _process(_delta):
 		return
 	for t in towers:
 		for e in enemies:
-			if t.in_range(e.get_parent().position):
-				t.turn_towards(e.get_parent().position)
+			if t.in_range(e):
+				t.target(e)
 
 func sort_towers_by_distance(a,b):
-	return a.get_parent().offset > b.get_parent().offset
+	return a.get_parent().offset < b.get_parent().offset
 		
