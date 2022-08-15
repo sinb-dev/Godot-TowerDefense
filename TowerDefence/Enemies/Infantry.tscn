@@ -4,7 +4,7 @@
 [ext_resource path="res://Enemies/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://Assets/healthbar.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.5914, 14.0861 )
 
 [sub_resource type="AtlasTexture" id=2]
@@ -17,7 +17,7 @@ region = Rect2( 979.823, 656.669, 24.9631, 30.7254 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 2 )
@@ -35,3 +35,5 @@ texture_progress = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="hit" from="." to="." method="_on_Infantry_hit"]
